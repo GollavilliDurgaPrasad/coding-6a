@@ -1,0 +1,46 @@
+// get all states results
+GET http://localhost:3000/states/
+
+// get state using movieId
+ GET http://localhost:3000/states/3/
+
+/// Add district using district table
+POST http://localhost:3000/districts/
+Content-Type:application/json
+
+{
+  "districtName" : "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+/// GET district using districtId
+GET http://localhost:3000/districts/3/
+
+/// DELETE district using districtId
+DELETE http://localhost:3000/districts/3/
+
+API 6 
+// UPDATE district using districtId
+ PUT http://localhost:3000/districts/2/
+ Content-Type:application/json
+ 
+ {
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+/// API 7
+
+ GET http://localhost:3000/states/:stateId/stats/
+
+
+ /// API 8
+ GET http://localhost:3000/districts/:districtId/details/
+ 
